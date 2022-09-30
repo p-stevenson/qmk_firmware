@@ -16,14 +16,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   #include "split_util.h"
 #endif
 
-/* #ifdef SSD1306OLED
-  #include "ssd1306.h"
-#endif
-
-#ifdef CONSOLE_ENABLE
-#include "print.h"
-#endif */
-
 extern uint8_t is_master;
 
 enum layer_number {
