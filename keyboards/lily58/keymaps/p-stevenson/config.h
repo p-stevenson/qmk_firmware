@@ -1,6 +1,6 @@
 /*
 This is the c configuration file for the keymap
-
+*/
 #pragma once
 
 /* Select hand configuration */
