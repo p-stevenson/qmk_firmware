@@ -15,13 +15,13 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #    include "lufa.h"
 #    include "split_util.h"
 #endif
-#ifdef SSD1306OLED
+/* #ifdef SSD1306OLED
 #    include "ssd1306.h"
 #endif
 
 #ifdef CONSOLE_ENABLE
 #    include "print.h"
-#endif
+#endif */
 
 extern uint8_t is_master;
 
@@ -69,7 +69,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // }
 
 // SSD1306 OLED update loop, make sure to enable OLED_DRIVER_ENABLE=yes in rules.mk
-#ifdef OLED_DRIVER_ENABLE
+
+// Uncomment to re-enable OLED
+/* #ifdef OLED_DRIVER_ENABLE
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (!is_keyboard_master()) return OLED_ROTATION_180; // flips the display 180 degrees if offhand
@@ -116,7 +118,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // set_timelog();
     }
     return true;
-}
+} */
 
 // TODO Tidy up Leader Keys
 LEADER_EXTERNS();
@@ -128,7 +130,7 @@ void matrix_scan_user(void) {
 
         // Other
         SEQ_ONE_KEY(KC_P) {
-            SEND_STRING("");
+            SEND_STRING("test");
         }
 
         // COLON
