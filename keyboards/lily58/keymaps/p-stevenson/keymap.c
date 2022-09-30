@@ -121,4 +121,5 @@ void matrix_scan_user(void) {
         unregister_code(KC_LSFT);
         unregister_code(KC_LCTL);
     }
+  }
 }
