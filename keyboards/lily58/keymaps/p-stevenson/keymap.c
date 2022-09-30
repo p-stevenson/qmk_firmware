@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 #include QMK_KEYBOARD_H
 enum {
   TD_CC,
