@@ -29,6 +29,7 @@ SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no 
 MAGIC_ENABLE = no
 AVR_USE_MINIMAL_PRINTF = yes
+MUSIC_ENABLE = no
 
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend

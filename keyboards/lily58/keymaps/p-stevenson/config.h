@@ -16,11 +16,6 @@ This is the c configuration file for the keymap
 #define LEADER_TIMEOUT 300
 #define LEADER_PER_KEY_TIMING
 
-// May need to re-enable below
-/* #undef RGBLED_NUM
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 27
-#define RGBLIGHT_LIMIT_VAL 120
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 17
-#define RGBLIGHT_VAL_STEP 17 */
+// Space saving, remove if issue
+#define NO_ACTION_ONESHOT
+#define NO_MUSIC_MODE
