@@ -37,7 +37,6 @@ enum layer_number {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-//TODO Consider Moving/Swapping out right side control key could potentially add new layer switch...
 
  [_COLEMAK] = LAYOUT( \
   KC_ESC,   KC_EXLM, KC_AT,   KC_HASH,  KC_DLR,  KC_PERC,                         KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_EQL, \
@@ -90,68 +89,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
             
 };
-
-// // Setting ADJUST layer RGB back to default
-// void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
-//   if (IS_LAYER_ON(layer1) && IS_LAYER_ON(layer2)) {
-//     layer_on(layer3);
-//   } else {
-//     layer_off(layer3);
-//   }
-// }
-
-//SSD1306 OLED update loop, make sure to enable OLED_DRIVER_ENABLE=yes in rules.mk
-
-// Disable OLED
-/* #ifdef OLED_DRIVER_ENABLE
-
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-  if (!is_keyboard_master())
-    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
-  return rotation;
-}
-
-// When you add source files to SRC in rules.mk, you can use functions.
-const char *read_layer_state(void);
-const char *read_logo(void);
-void set_keylog(uint16_t keycode, keyrecord_t *record);
-const char *read_keylog(void);
-const char *read_keylogs(void);
-
-// const char *read_mode_icon(bool swap);
-const char *read_host_led_state(void);
-// void set_timelog(void);
-// const char *read_timelog(void);
-
-void oled_task_user(void) {
-  if (is_keyboard_master()) {
-    // If you want to change the display of OLED, you need to change here
-    oled_write_ln(read_layer_state(), false);
-    oled_write_ln(read_keylog(), false);
-    oled_write_ln(read_keylogs(), false);
-    //oled_write_ln(read_mode_icon(keymap_config.swap_lalt_lgui), false);
-    oled_write_ln(read_host_led_state(), false);
-    //oled_write_ln(read_timelog(), false);
-  } else {
-    oled_write(read_logo(), false);
-  }
-}
-#endif // OLED_DRIVER_ENABLE
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    #ifdef CONSOLE_ENABLE
-        if (record->event.pressed) {
-            uprintf("0x%04X,%u,%u,%u\n", keycode, record->event.key.row, record->event.key.col, get_highest_layer(layer_state));
-        }
-    #endif
-//#ifdef OLED_DRIVER_ENABLE
-//    set_keylog(keycode, record);
-//#endif
-    // set_timelog();
-  }
-  return true;
-} */
 
 // TODO Tidy up Leader Keys
 LEADER_EXTERNS();
@@ -283,7 +220,6 @@ void matrix_scan_user(void) {
         tap_code(KC_DEL);
         unregister_code(KC_LCTL);
         unregister_code(KC_LALT);
-//      did_leader_succeed = true;
     }
 
 // VSCODE FOCUS ACTIVE TERMINAL
@@ -302,7 +238,6 @@ void matrix_scan_user(void) {
         tap_code(KC_T);
         unregister_code(KC_LCTL);
         unregister_code(KC_LALT);
-//      did_leader_succeed = true;
     }
 // POWER OFF
       SEQ_ONE_KEY(KC_ESC) {
