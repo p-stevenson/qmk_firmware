@@ -19,3 +19,4 @@ This is the c configuration file for the keymap
 // Space saving, remove if issue
 #define NO_ACTION_ONESHOT
 #define NO_MUSIC_MODE
+#define LAYER_STATE_8BIT
