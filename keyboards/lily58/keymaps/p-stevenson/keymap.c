@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  LALT(KC_Q), LALT(KC_W), LALT(KC_F),  LALT(KC_P), LALT(KC_G),                         LALT(KC_J), LALT(KC_L), LALT(KC_U),    LALT(KC_Y),   LALT(KC_BSPC), LALT(KC_MINS),\
   _______, LALT(KC_A), LALT(KC_R), LALT(KC_S),  LALT(KC_T), LALT(KC_D),                         LALT(KC_H), LALT(KC_N), LALT(KC_E),    LALT(KC_I),   LALT(KC_O),    LALT(KC_QUOT),\
   _______, LALT(KC_Z), LALT(KC_X), LALT(KC_C),  LALT(KC_V), LALT(KC_B), TD(TD_SLSH),   XXXXXXX, LALT(KC_K), LALT(KC_M), LALT(KC_COMM), LALT(KC_DOT), LALT(KC_QUES), LALT(KC_ENT), \
-                                             _______, _______, _______, MO(_GAME),     _______, _______,    _______, _______ \
+                                             _______, _______, _______, _______,       _______, _______,    _______, _______ \
   ),
 
 // --------------------------------------------------------------------------------
