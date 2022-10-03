@@ -5,6 +5,10 @@ enum {
   TD_SLSH,
 };
 
+enum my_keycodes {
+    TERM = LALT(KC_F12),
+};
+
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_CC] = ACTION_TAP_DANCE_DOUBLE(KC_LCTL, KC_CAPS), //  Tap once for LCTRL, twice for CAPS
   [TD_BRCS] = ACTION_TAP_DANCE_DOUBLE(KC_LBRC, KC_RBRC), //  Tap once for LEFT Braces, twice for RIGHT
@@ -50,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT( \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  _______, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, TERM,    XXXXXXX,                       XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LGUI(KC_SLSH),XXXXXXX,KC_HOME, KC_END,  XXXXXXX, KC_PGUP,  KC_PGDN, XXXXXXX, \
                              _______, _______, _______, _______,      _______, _______, XXXXXXX, _______ \
 ),
