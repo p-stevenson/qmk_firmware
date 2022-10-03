@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,    KC_W,    KC_F,     KC_P,    KC_G,                            KC_J,    KC_L,    KC_U,    KC_Y,    KC_BSPC, KC_MINS,\
   TD(TD_CC),KC_A,    KC_R,    KC_S,     KC_T,    KC_D,                            KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,\
   KC_LGUI,  KC_Z,    KC_X,    KC_C,     KC_V,    KC_B, TD(TD_SLSH),  TD(TD_BRCS), KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUES, KC_ENT, \
-                   KC_LALT, TT(_LOWER), KC_LSFT, KC_LEAD,            TT(_RAISE),  KC_SPC,  TT(_GAMESFT), KC_DEL \
+                             _______, KC_LALT, KC_LSFT, KC_SPC,      TT(_RAISE),  KC_SPC,  TT(_LOWER), KC_DEL \
 ),
 
 // --------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // TODO Tidy up Leader Keys
-LEADER_EXTERNS();
+/* LEADER_EXTERNS();
 
 void matrix_scan_user(void) {
   LEADER_DICTIONARY() {
