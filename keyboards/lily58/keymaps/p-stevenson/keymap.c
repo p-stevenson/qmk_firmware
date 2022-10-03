@@ -95,10 +95,10 @@ void matrix_scan_user(void) {
     }
 
 // WEBSTORM OPEN/CLOSE/FOCUS TERMINAL
-        SEQ_ONE_KEY(KC_B) {
+        SEQ_ONE_KEY(KC_T) {
         register_code(KC_LALT);
         register_code(KC_F12);
-        tap_code(KC_B);
+        tap_code(KC_T);
         unregister_code(KC_LALT);
         unregister_code(KC_F12);
     }
