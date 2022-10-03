@@ -10,10 +10,10 @@ This is the c configuration file for the keymap
 #define USE_SERIAL_PD2
 
 //#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 200
+#define TAPPING_TERM 300
 #define TAPPING_TOGGLE 2
 
-#define LEADER_TIMEOUT 300
+#define LEADER_TIMEOUT 400
 #define LEADER_PER_KEY_TIMING
 
 // Space saving, remove if issue
