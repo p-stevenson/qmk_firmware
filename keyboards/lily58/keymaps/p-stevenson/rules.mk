@@ -4,6 +4,7 @@
 #
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 TAP_DANCE_ENABLE = yes
+LEADER_ENABLE = yes
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys
 CONSOLE_ENABLE = no         # Console for debug
@@ -17,7 +18,6 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_DRIVER_ENABLE= no     # OLED display - off for space
-LEADER_ENABLE = no
 
 
 # This will cause the final step to take longer, but should get you a smaller compiled size. # This also disables Action Functions, and Action Macros, both of which are deprecated.
