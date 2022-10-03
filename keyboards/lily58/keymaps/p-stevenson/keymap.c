@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 // --------------------------------------------------------------------------------
 
-            
+
 };
 
 // TODO Tidy up Leader Keys
@@ -104,14 +104,33 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_O, KC_O) {
       SEND_STRING(";");
     }
-    
-// VSCODE FOCUS ACTIVE TERMINAL
+
+// WEBSTORM OPEN/CLOSE/FOCUS TERMINAL
+        SEQ_ONE_KEY(KC_B) {
+        register_code(KC_LALT);
+        register_code(KC_F12);
+        tap_code(KC_B);
+        unregister_code(KC_LALT);
+        unregister_code(KC_F12);
+    }
+
+// WEBSTORM
+        SEQ_TWO_KEYS(KC_P, KC_R) {
+        register_code(KC_LALT);
+        register_code(KC_6);
+        tap_code(KC_P);
+        unregister_code(KC_LALT);
+        unregister_code(KC_6);
+    }
+
+/*
         SEQ_ONE_KEY(KC_T) {
-        register_code(KC_LCTL);
+        register_code(KC_LALT);
         register_code(KC_LSFT);
         tap_code(KC_T);
         unregister_code(KC_LSFT);
         unregister_code(KC_LCTL);
     }
+ */
   }
 }
