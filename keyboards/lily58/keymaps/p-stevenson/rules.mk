@@ -2,9 +2,10 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
+EXTRAKEY_ENABLE = yes       # Audio control and System control
+TAP_DANCE_ENABLE = yes
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys
-EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 NKRO_ENABLE = no            # Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
@@ -13,20 +14,19 @@ MIDI_ENABLE = no            # MIDI controls
 AUDIO_ENABLE = no           # Audio output on port C6
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
-RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight. 
+RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_DRIVER_ENABLE= no     # OLED display - off for space
-TAP_DANCE_ENABLE = yes
-LEADER_ENABLE = yes
+LEADER_ENABLE = no
 
 
-# This will cause the final step to take longer, but should get you a smaller compiled size. # This also disables Action Functions, and Action Macros, both of which are deprecated. 
+# This will cause the final step to take longer, but should get you a smaller compiled size. # This also disables Action Functions, and Action Macros, both of which are deprecated.
 # This will get you the most savings, in most situations.
-LTO_ENABLE = yes 
+LTO_ENABLE = yes
 
 # More space saving
 SPACE_CADET_ENABLE = no
-GRAVE_ESC_ENABLE = no 
+GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 AVR_USE_MINIMAL_PRINTF = yes
 MUSIC_ENABLE = no
@@ -43,4 +43,4 @@ SRC +=  ./lib/rgb_state_reader.c \
         # ./lib/mode_icon_reader.c \
         # ./lib/timelogger.c \
 # Bootloader selection
-BOOTLOADER = caterina   
+BOOTLOADER = caterina
