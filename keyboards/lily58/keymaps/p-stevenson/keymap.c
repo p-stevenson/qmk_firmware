@@ -20,10 +20,8 @@ extern uint8_t is_master;
 
 enum layer_number {
   _COLEMAK = 0,
-  _GAMESFT = 1,
-  _LOWER = 2,
-  _RAISE = 3,
-
+  _LOWER = 1,
+  _RAISE = 2,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -36,16 +34,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LGUI,  KC_Z,    KC_X,    KC_C,     KC_V,    KC_B, TD(TD_SLSH),  TD(TD_BRCS), KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUES, KC_ENT, \
                    KC_LALT, TT(_LOWER), KC_LSFT, KC_LEAD,            TT(_RAISE),  KC_SPC,  TT(_GAMESFT), KC_DEL \
 ),
-
-// --------------------------------------------------------------------------------
-
-  [_GAMESFT] = LAYOUT( \
-  KC_ESC,  LCTL(KC_1), LCTL(KC_2), LCTL(KC_3),  LCTL(KC_4), LCTL(KC_5),                         LCTL(KC_6), LCTL(KC_7), LCTL(KC_8),    LCTL(KC_9),   LCTL(KC_0),    _______, \
-  KC_TAB,  LALT(KC_Q), LALT(KC_W), LALT(KC_F),  LALT(KC_P), LALT(KC_G),                         LALT(KC_J), LALT(KC_L), LALT(KC_U),    LALT(KC_Y),   LALT(KC_BSPC), LALT(KC_MINS),\
-  _______, LALT(KC_A), LALT(KC_R), LALT(KC_S),  LALT(KC_T), LALT(KC_D),                         LALT(KC_H), LALT(KC_N), LALT(KC_E),    LALT(KC_I),   LALT(KC_O),    LALT(KC_QUOT),\
-  _______, LALT(KC_Z), LALT(KC_X), LALT(KC_C),  LALT(KC_V), LALT(KC_B), TD(TD_SLSH),   XXXXXXX, LALT(KC_K), LALT(KC_M), LALT(KC_COMM), LALT(KC_DOT), LALT(KC_QUES), LALT(KC_ENT), \
-                                             _______, _______, _______, _______,       _______, _______,    _______, _______ \
-  ),
 
 // --------------------------------------------------------------------------------
 
@@ -112,7 +100,7 @@ void matrix_scan_user(void) {
         unregister_code(KC_6);
     }
 
-/*
+ *//*
         SEQ_ONE_KEY(KC_T) {
         register_code(KC_LALT);
         register_code(KC_LSFT);
@@ -120,6 +108,6 @@ void matrix_scan_user(void) {
         unregister_code(KC_LSFT);
         unregister_code(KC_LCTL);
     }
- */
+ *//*
   }
-}
+} */
