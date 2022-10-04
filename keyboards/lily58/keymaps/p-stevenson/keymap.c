@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,    KC_W,    KC_F,     KC_P,    KC_G,                            KC_J,    KC_L,    KC_U,    KC_Y,    KC_BSPC, KC_MINS,\
   TD(TD_CC),KC_A,    KC_R,    KC_S,     KC_T,    KC_D,                            KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,\
   KC_LGUI,  KC_Z,    KC_X,    KC_C,     KC_V,    KC_B, TD(TD_SLSH),  TD(TD_BRCS), KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUES, KC_ENT, \
-                             KC_LEAD, KC_LALT, KC_LSFT, KC_SPC,      TT(_RAISE),  KC_SPC,  TT(_LOWER), KC_DEL \
+                             KC_SPC, KC_LALT, KC_LSFT, KC_LEAD,      TT(_RAISE),  KC_SPC,  TT(_LOWER), KC_DEL \
 ),
 
 // --------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  _______, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, KC_TERM, KC_DUPE,                       XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CMNT,         XXXXXXX,KC_HOME, KC_END,  XXXXXXX, KC_PGUP,  KC_PGDN, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CMNT,      XXXXXXX,KC_HOME, KC_END,  XXXXXXX, KC_PGUP,  KC_PGDN, XXXXXXX, \
                              _______, _______, _______, _______,      _______, _______, XXXXXXX, _______ \
 ),
 // --------------------------------------------------------------------------------
