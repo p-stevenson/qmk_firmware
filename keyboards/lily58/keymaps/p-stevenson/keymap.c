@@ -9,16 +9,12 @@ enum {
 enum my_keycodes {
     KC_CMNT = LCTL(KC_SLSH),
     KC_DUPE = LCTL(KC_D),
-    KC_DBUG = LSFT(KC_F9),
-    KC_RERUN = LCTL(KC_F5),
-    KC_BRKP = LCTL(KC_F8),
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_CC] = ACTION_TAP_DANCE_DOUBLE(KC_LCTL, KC_CAPS), //  Tap once for LCTRL, twice for CAPS
   [TD_BRCS] = ACTION_TAP_DANCE_DOUBLE(KC_LBRC, KC_RBRC), //  Tap once for LEFT Braces, twice for RIGHT
   [TD_SLSH] = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, KC_BSLS), // Tap once for BACK Slash, twice for FORWARD
-  [TD_DBUG] = ACTION_TAP_DANCE_DOUBLE(KC_DBUG, KC_RERUN), // Tap once for Debug, twice for rerun debugger
 };
 
 #ifdef PROTOCOL_LUFA
@@ -61,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       KC_INS,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  _______, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DUPE,                       XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX, \
-  _______, KC_BRKP, XXXXXXX, XXXXXXX, XXXXXXX, TD(TD_DBUG), KC_CMNT,     XXXXXXX,KC_HOME, KC_END,  KC_PGUP, KC_PGDN,  XXXXXXX, XXXXXXX, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CMNT,     XXXXXXX,KC_HOME, KC_END,  KC_PGUP, KC_PGDN,  XXXXXXX, XXXXXXX, \
                               _______, _______, _______, _______,     _______, _______, XXXXXXX, _______ \
 ),
 // --------------------------------------------------------------------------------
@@ -92,18 +88,48 @@ void matrix_scan_user(void) {
       SEND_STRING(";");
     }
 // WEBSTORM TERMINAL
-    SEQ_TWO_KEYS(KC_T, KC_W) {
+    SEQ_TWO_KEYS(KC_T, KC_T) {
     register_code(KC_LALT);
     register_code(KC_F12);
     unregister_code(KC_LALT);
     unregister_code(KC_F12);
   }
 // OS TERMINAL
-    SEQ_TWO_KEYS(KC_T, KC_X) {
+    SEQ_ONE_KEY(KC_T) {
     register_code(KC_LGUI);
     register_code(KC_ENT);
     unregister_code(KC_LGUI);
     unregister_code(KC_ENT);
     }
-}
+// DEBUG
+    SEQ_ONE_KEY(KC_D) {
+    register_code(KC_LSFT);
+    register_code(KC_F9);
+    unregister_code(KC_LSFT);
+    unregister_code(KC_F9);
+    }
+// RERUN DEBUG
+    SEQ_TWO_KEYS(KC_D, KC_D) {
+    register_code(KC_LCTL);
+    register_code(KC_F5);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_F5);
+    }
+// RUN TO CURSOR
+    SEQ_TWO_KEYS(KC_R, KC_C) {
+    register_code(KC_LALT);
+    register_code(KC_LSFT);
+    register_code(KC_9);
+    unregister_code(KC_LALT);
+    unregister_code(KC_LSFT);
+    unregister_code(KC_9);
+    }
+// STOP DEBUG
+    SEQ_ONE_KEY(KC_ESC){
+    register_code(KC_LCTL);
+    register_code(KC_F2);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_F2);
+    }
+  }
 }
