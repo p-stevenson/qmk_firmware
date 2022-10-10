@@ -131,5 +131,25 @@ void matrix_scan_user(void) {
     unregister_code(KC_LCTL);
     unregister_code(KC_F2);
     }
+// PRETTIER
+    SEQ_ONE_KEY(KC_L){
+    register_code(KC_LCTL);
+    register_code(KC_LALT);
+    register_code(KC_L);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_LALT);
+    unregister_code(KC_L);
+    }
+// PRETTIER DIALOG
+    SEQ_TWO_KEYS(KC_L, KC_L){
+    register_code(KC_LCTL);
+    register_code(KC_LALT);
+    register_code(KC_LSFT);
+    register_code(KC_L);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_LALT);
+    unregister_code(KC_LSFT);
+    unregister_code(KC_L);
+    }
   }
 }
