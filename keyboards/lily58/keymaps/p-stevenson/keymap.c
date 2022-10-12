@@ -74,7 +74,7 @@ void matrix_scan_user(void) {
     leader_end();
 
 // Other
-    SEQ_ONE_KEY(KC_P) {
+    SEQ_THREE_KEYS(KC_P, KC_P, KC_P) {
       SEND_STRING("");
     }
 
@@ -109,14 +109,21 @@ void matrix_scan_user(void) {
     unregister_code(KC_F9);
     }
 // RERUN DEBUG
-    SEQ_TWO_KEYS(KC_D, KC_D) {
+    SEQ_TWO_KEYS(KC_D, KC_R) {
     register_code(KC_LCTL);
     register_code(KC_F5);
     unregister_code(KC_LCTL);
     unregister_code(KC_F5);
     }
+// STOP DEBUG
+    SEQ_TWO_KEYS(KC_D, KC_ESC){
+    register_code(KC_LCTL);
+    register_code(KC_F2);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_F2);
+    }
 // RUN TO CURSOR
-    SEQ_TWO_KEYS(KC_R, KC_C) {
+    SEQ_THREE_KEYS(KC_D, KC_R, KC_C) {
     register_code(KC_LALT);
     register_code(KC_LSFT);
     register_code(KC_9);
@@ -124,15 +131,15 @@ void matrix_scan_user(void) {
     unregister_code(KC_LSFT);
     unregister_code(KC_9);
     }
-// STOP DEBUG
-    SEQ_ONE_KEY(KC_ESC){
+// DEBUG BREAK POINT
+    SEQ_TWO_KEYS(KC_D, KC_B){
     register_code(KC_LCTL);
-    register_code(KC_F2);
+    register_code(KC_F8);
     unregister_code(KC_LCTL);
-    unregister_code(KC_F2);
+    unregister_code(KC_F8);
     }
 // PRETTIER
-    SEQ_ONE_KEY(KC_L){
+    SEQ_ONE_KEY(KC_P){
     register_code(KC_LCTL);
     register_code(KC_LALT);
     register_code(KC_L);
