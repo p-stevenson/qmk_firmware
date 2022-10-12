@@ -13,8 +13,8 @@ This is the c configuration file for the keymap
 #define TAPPING_TERM 300
 #define TAPPING_TOGGLE 2
 
-#define LEADER_TIMEOUT 400
 #define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 400
 
 // Space saving, remove if issue
 #define NO_ACTION_ONESHOT
