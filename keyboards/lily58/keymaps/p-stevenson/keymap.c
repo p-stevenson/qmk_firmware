@@ -138,6 +138,17 @@ void matrix_scan_user(void) {
     unregister_code(KC_LCTL);
     unregister_code(KC_F8);
     }
+// CONSOLE CLEAR ALL
+    SEQ_ONE_KEY(KC_L){
+    register_code(KC_LCTL);
+    register_code(KC_LSFT);
+    register_code(KC_LALT);
+    register_code(KC_BSPC);
+    unregister_code(KC_LCTL);
+    unregister_code(KC_LSFT);
+    unregister_code(KC_LALT);
+    unregister_code(KC_BSPC);
+    }
 // PRETTIER
     SEQ_ONE_KEY(KC_P){
     register_code(KC_LCTL);
