@@ -139,7 +139,7 @@ void matrix_scan_user(void) {
     unregister_code(KC_F8);
     }
 // CONSOLE CLEAR ALL
-    SEQ_ONE_KEY(KC_L){
+    SEQ_TWO_KEYS(KC_L, KC_L){
     register_code(KC_LCTL);
     register_code(KC_LSFT);
     register_code(KC_LALT);
@@ -159,7 +159,7 @@ void matrix_scan_user(void) {
     unregister_code(KC_L);
     }
 // PRETTIER DIALOG
-    SEQ_TWO_KEYS(KC_L, KC_L){
+    SEQ_TWO_KEYS(KC_P, KC_L){
     register_code(KC_LCTL);
     register_code(KC_LALT);
     register_code(KC_LSFT);
