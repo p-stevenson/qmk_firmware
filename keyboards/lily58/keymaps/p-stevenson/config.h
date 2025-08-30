@@ -5,7 +5,7 @@ This is the c configuration file for the keymap
 
 /* Select hand configuration */
 
-#define MASTER_LEFT
+#define MASTER_RIGHT
 
 #define USE_SERIAL_PD2
 
